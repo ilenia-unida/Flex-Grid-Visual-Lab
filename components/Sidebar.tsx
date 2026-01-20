@@ -33,11 +33,9 @@ const Sidebar: React.FC<SidebarProps> = ({ state, setState, addChild, removeChil
 
   const flexBasisOptions = [
     { label: 'Auto', value: 'auto' },
-    { label: '0', value: '0' },
-    { label: 'Content', value: 'content' },
-    { label: 'Max Content', value: 'max-content' },
-    { label: 'Min Content', value: 'min-content' },
-    { label: 'Fit Content', value: 'fit-content' },
+    { label: '100px', value: '100px' },
+    { label: '150px', value: '150px' },
+    { label: '200px', value: '200px' },
     { label: '25%', value: '25%' },
     { label: '50%', value: '50%' },
     { label: '100%', value: '100%' },
@@ -178,7 +176,7 @@ const Sidebar: React.FC<SidebarProps> = ({ state, setState, addChild, removeChil
              <div className="flex items-center justify-between text-cyan-700 border-b border-cyan-100 pb-2">
                <div className="flex items-center gap-2">
                  <Settings2 size={14} className="animate-pulse" />
-                 <span className="text-xs font-bold uppercase tracking-wider">Editing Box {state.children.findIndex(c => c.id === selectedChildId) + 1}</span>
+                 <span className="text-xs font-bold uppercase tracking-wider">Box {state.children.findIndex(c => c.id === selectedChildId) + 1} Style</span>
                </div>
                <Box size={14} className="text-blue-500" />
              </div>
@@ -200,30 +198,7 @@ const Sidebar: React.FC<SidebarProps> = ({ state, setState, addChild, removeChil
                     </select>
                   </ControlGroup>
 
-                  <div className="flex gap-3 items-start">
-                    <div className="flex-1">
-                      <ControlGroup label="Flex Grow">
-                        <input 
-                          type="number" min="0" 
-                          value={selectedChild.flexGrow}
-                          onChange={(e) => updateChildStyles(selectedChild.id, { flexGrow: parseInt(e.target.value) || 0 })}
-                          className="w-full bg-white border border-slate-200 rounded-lg p-2 text-xs text-slate-800 shadow-sm h-9 focus:ring-2 focus:ring-blue-400 outline-none"
-                        />
-                      </ControlGroup>
-                    </div>
-                    <div className="flex-1">
-                      <ControlGroup label="Flex Shrink">
-                        <input 
-                          type="number" min="0" 
-                          value={selectedChild.flexShrink}
-                          onChange={(e) => updateChildStyles(selectedChild.id, { flexShrink: parseInt(e.target.value) || 0 })}
-                          className="w-full bg-white border border-slate-200 rounded-lg p-2 text-xs text-slate-800 shadow-sm h-9 focus:ring-2 focus:ring-blue-400 outline-none"
-                        />
-                      </ControlGroup>
-                    </div>
-                  </div>
-
-                  <ControlGroup label="Flex Basis">
+                  <ControlGroup label="Flex Basis (Width/Height)">
                     <div className="space-y-2">
                       <select 
                         value={flexBasisOptions.find(o => o.value === selectedChild.flexBasis) ? selectedChild.flexBasis : 'custom'}

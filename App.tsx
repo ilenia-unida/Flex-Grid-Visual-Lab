@@ -7,9 +7,9 @@ import Canvas from './components/Canvas';
 import CodePanel from './components/CodePanel';
 
 const INITIAL_CHILDREN: ChildStyles[] = [
-  { id: 1, flexGrow: 0, flexShrink: 1, flexBasis: 'auto', alignSelf: 'auto', gridColumn: 'auto', gridRow: 'auto' },
-  { id: 2, flexGrow: 0, flexShrink: 1, flexBasis: 'auto', alignSelf: 'auto', gridColumn: 'auto', gridRow: 'auto' },
-  { id: 3, flexGrow: 0, flexShrink: 1, flexBasis: 'auto', alignSelf: 'auto', gridColumn: 'auto', gridRow: 'auto' },
+  { id: 1, flexGrow: 0, flexShrink: 1, flexBasis: '200px', alignSelf: 'auto', gridColumn: 'auto', gridRow: 'auto' },
+  { id: 2, flexGrow: 0, flexShrink: 1, flexBasis: '200px', alignSelf: 'auto', gridColumn: 'auto', gridRow: 'auto' },
+  { id: 3, flexGrow: 0, flexShrink: 1, flexBasis: '200px', alignSelf: 'auto', gridColumn: 'auto', gridRow: 'auto' },
 ];
 
 const App: React.FC = () => {
@@ -44,7 +44,7 @@ const App: React.FC = () => {
           id: Date.now(),
           flexGrow: 0,
           flexShrink: 1,
-          flexBasis: 'auto',
+          flexBasis: '200px',
           alignSelf: 'auto',
           gridColumn: 'auto',
           gridRow: 'auto',
