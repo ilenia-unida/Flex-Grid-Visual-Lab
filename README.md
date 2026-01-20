@@ -1,6 +1,7 @@
 🚀 Panoramica del Progetto
 
 Flex-Grid Visual Lab nasce dalla necessità di rendere l'apprendimento e il debugging dei layout CSS un'esperienza visiva e immediata. Invece di procedere per tentativi nel codice, questo tool permette agli sviluppatori di manipolare i contenitori in tempo reale, vedendo l'effetto delle proprietà CSS istantaneamente in un ambiente sandbox rifinito.
+
 ✨ Caratteristiche Principali
 
     Dual Mode Engine: Passa fluidamente tra le logiche di Flexbox e CSS Grid.
