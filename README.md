@@ -1,27 +1,48 @@
-🚀 Panoramica del Progetto
+# 🎨 Flex-Grid Visual Lab
 
-Flex-Grid Visual Lab nasce dalla necessità di rendere l'apprendimento e il debugging dei layout CSS un'esperienza visiva e immediata. Invece di procedere per tentativi nel codice, questo tool permette agli sviluppatori di manipolare i contenitori in tempo reale, vedendo l'effetto delle proprietà CSS istantaneamente in un ambiente sandbox rifinito.
+> **Interactive Layout Engine & CSS Generator.**
+> Uno strumento professionale progettato per visualizzare, sperimentare e generare istantaneamente layout complessi in Flexbox e CSS Grid.
 
-✨ Caratteristiche Principali
+---
 
-    Dual Mode Engine: Passa fluidamente tra le logiche di Flexbox e CSS Grid.
+## 📌 Visione del Progetto
 
-    Real-time Code Generation: Genera snippet di codice CSS puro e classi Tailwind CSS pronte al copia-incolla.
+**Flex-Grid Visual Lab** nasce per trasformare la scrittura dei layout CSS da un processo di "tentativi ed errori" a un'esperienza visiva immediata. Il tool combina una potenza di calcolo real-time con un'interfaccia **Glassmorphism** d'impatto, pensata per chi mette la Developer Experience al primo posto.
 
-    Advanced Controls: Gestione dinamica di gap, alignment, direction e proprietà specifiche per i singoli figli come align-self.
+---
 
-    Responsive Preview: Verifica istantaneamente come il layout si comporta su diverse risoluzioni (Mobile, Tablet, Desktop).
+## ✨ Caratteristiche Principali
 
-    Premium UI: Interfaccia ispirata al design futuristico con sfondi a mesh gradiente, effetti glassmorphism e animazioni fluide con Framer Motion.
+### 🔬 Dual Engine Sandbox
 
-🛠️ Tech Stack
+Passa fluidamente tra le logiche di allineamento **Flexbox** e le strutture rigide di **CSS Grid** con un toggle. I controlli cambiano contestualmente per offrire solo le proprietà necessarie.
 
-    React 19 / Next.js: Per la struttura e la gestione dello stato reattivo.
+### ⚡ Generatore di Codice Istantaneo
 
-    Tailwind CSS: Per lo styling e la generazione delle utility class.
+Ottieni il codice pronto per la produzione mentre muovi gli slider:
 
-    Framer Motion: Per garantire transizioni fluide tra i cambi di layout (Layout Animations).
+* **Pure CSS:** Codice standard, pulito e formattato.
+* **Tailwind CSS:** Lista completa delle utility class per un'integrazione immediata nei progetti moderni.
 
-    Lucide React: Per un set di icone minimale e intuitivo.
+### 📱 Preview Multi-Device
 
-    Sviluppato da Ilenia Unida- 2026
+Area di lavoro ridimensionabile con preset per **Mobile, Tablet e Desktop**, permettendo di testare la resa del layout su diversi breakpoint senza uscire dall'applicazione.
+
+### 🌈 UI "Aero" Design
+
+* **Mesh Gradient Background:** Sfondo dinamico con gradienti profondi e sfumature organiche ispirate al design moderno.
+* **Frosted Glass Interface:** Pannelli di controllo semitrasparenti per una leggibilità superiore e un look professionale.
+* **Smart Animations:** Movimenti fluidi degli elementi (grazie a Framer Motion) per evidenziare visivamente il riposizionamento dei componenti nello spazio.
+
+---
+
+## 🛠️ Tech Stack
+
+* **React:** Per la gestione reattiva dello stato e dell'interfaccia.
+* **Tailwind CSS:** Styling avanzato con effetti di trasparenza e layout dinamici.
+* **Framer Motion:** Gestione delle animazioni di layout e delle transizioni fluide.
+* **Lucide Icons:** Iconografia minimale per una navigazione intuitiva.
+
+---
+
+Sviluppato da Ilenia Unida - 2026
