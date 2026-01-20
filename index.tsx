@@ -1,14 +1,14 @@
 
 import React from 'react';
-import { createRoot } from 'https://esm.sh/react-dom@^19.2.3/client';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 
 const rootElement = document.getElementById('root');
-if (!rootElement) throw new Error("Could not find root element");
-
-const root = createRoot(rootElement);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+if (rootElement) {
+  const root = createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}
