@@ -200,13 +200,14 @@ const Sidebar: React.FC<SidebarProps> = ({ state, setState, addChild, removeChil
                     </select>
                   </ControlGroup>
 
-                  <div className="grid grid-cols-2 gap-3">
+                  {/* Fix per il disallineamento tra Grow e Shrink */}
+                  <div className="grid grid-cols-2 gap-3 items-start">
                     <ControlGroup label="Flex Grow">
                       <input 
                         type="number" min="0" 
                         value={selectedChild.flexGrow}
                         onChange={(e) => updateChildStyles(selectedChild.id, { flexGrow: parseInt(e.target.value) || 0 })}
-                        className="w-full bg-white border border-slate-200 rounded-lg p-2 text-xs text-slate-800 shadow-sm"
+                        className="w-full bg-white border border-slate-200 rounded-lg p-2 text-xs text-slate-800 shadow-sm h-[34px] focus:ring-2 focus:ring-blue-400 outline-none"
                       />
                     </ControlGroup>
                     <ControlGroup label="Flex Shrink">
@@ -214,7 +215,7 @@ const Sidebar: React.FC<SidebarProps> = ({ state, setState, addChild, removeChil
                         type="number" min="0" 
                         value={selectedChild.flexShrink}
                         onChange={(e) => updateChildStyles(selectedChild.id, { flexShrink: parseInt(e.target.value) || 0 })}
-                        className="w-full bg-white border border-slate-200 rounded-lg p-2 text-xs text-slate-800 shadow-sm"
+                        className="w-full bg-white border border-slate-200 rounded-lg p-2 text-xs text-slate-800 shadow-sm h-[34px] focus:ring-2 focus:ring-blue-400 outline-none"
                       />
                     </ControlGroup>
                   </div>
@@ -242,7 +243,7 @@ const Sidebar: React.FC<SidebarProps> = ({ state, setState, addChild, removeChil
                           value={selectedChild.flexBasis === 'custom' ? '' : selectedChild.flexBasis}
                           onChange={(e) => updateChildStyles(selectedChild.id, { flexBasis: e.target.value })}
                           placeholder="e.g. 150px or 30%"
-                          className="w-full bg-white border border-slate-200 rounded-lg p-2 text-xs text-slate-800 shadow-sm font-mono animate-in fade-in zoom-in-95 duration-200"
+                          className="w-full bg-white border border-slate-200 rounded-lg p-2 text-xs text-slate-800 shadow-sm font-mono animate-in fade-in zoom-in-95 duration-200 focus:ring-2 focus:ring-blue-400 outline-none"
                         />
                       )}
                     </div>
@@ -285,11 +286,13 @@ const Sidebar: React.FC<SidebarProps> = ({ state, setState, addChild, removeChil
 };
 
 const ControlGroup: React.FC<{ label: string; children: React.ReactNode }> = ({ label, children }) => (
-  <div className="space-y-2">
-    <label className="text-[10px] font-extrabold bg-gradient-to-r from-cyan-600 to-blue-500 bg-clip-text text-transparent uppercase tracking-widest block drop-shadow-sm">
+  <div className="flex flex-col gap-1.5 flex-1">
+    <label className="text-[10px] font-extrabold bg-gradient-to-r from-cyan-600 to-blue-500 bg-clip-text text-transparent uppercase tracking-widest block drop-shadow-sm min-h-[14px]">
       {label}
     </label>
-    {children}
+    <div className="w-full">
+      {children}
+    </div>
   </div>
 );
 
