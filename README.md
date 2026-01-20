@@ -1,20 +1,26 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+🚀 Panoramica del Progetto
 
-# Run and deploy your AI Studio app
+Flex-Grid Visual Lab nasce dalla necessità di rendere l'apprendimento e il debugging dei layout CSS un'esperienza visiva e immediata. Invece di procedere per tentativi nel codice, questo tool permette agli sviluppatori di manipolare i contenitori in tempo reale, vedendo l'effetto delle proprietà CSS istantaneamente in un ambiente sandbox rifinito.
+✨ Caratteristiche Principali
 
-This contains everything you need to run your app locally.
+    Dual Mode Engine: Passa fluidamente tra le logiche di Flexbox e CSS Grid.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1uGSZrlpvtOeCo3xsS-nhRjrIX_1pJH1Z
+    Real-time Code Generation: Genera snippet di codice CSS puro e classi Tailwind CSS pronte al copia-incolla.
 
-## Run Locally
+    Advanced Controls: Gestione dinamica di gap, alignment, direction e proprietà specifiche per i singoli figli come align-self.
 
-**Prerequisites:**  Node.js
+    Responsive Preview: Verifica istantaneamente come il layout si comporta su diverse risoluzioni (Mobile, Tablet, Desktop).
 
+    Premium UI: Interfaccia ispirata al design futuristico con sfondi a mesh gradiente, effetti glassmorphism e animazioni fluide con Framer Motion.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+🛠️ Tech Stack
+
+    React 19 / Next.js: Per la struttura e la gestione dello stato reattivo.
+
+    Tailwind CSS: Per lo styling e la generazione delle utility class.
+
+    Framer Motion: Per garantire transizioni fluide tra i cambi di layout (Layout Animations).
+
+    Lucide React: Per un set di icone minimale e intuitivo.
+
+    Sviluppato da Ilenia Unida- 2026
