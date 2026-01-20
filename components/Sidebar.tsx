@@ -44,9 +44,9 @@ const Sidebar: React.FC<SidebarProps> = ({ state, setState, addChild, removeChil
   ];
 
   return (
-    <aside className="w-80 flex flex-col gap-6 overflow-y-auto custom-scrollbar glass rounded-3xl p-6 shadow-xl">
+    <aside className="w-80 flex flex-col gap-6 overflow-y-auto custom-scrollbar glass rounded-3xl p-6 shadow-xl shrink-0">
       {/* Mode Switcher */}
-      <div className="flex bg-slate-200/50 p-1 rounded-2xl border border-white/50">
+      <div className="flex bg-slate-200/50 p-1 rounded-2xl border border-white/50 shrink-0">
         <button 
           onClick={() => setMode('flex')}
           className={`flex-1 py-2 px-4 rounded-xl text-sm font-semibold transition-all ${state.mode === 'flex' ? 'bg-cyan-600 text-white shadow-md' : 'text-slate-500 hover:text-slate-800'}`}
@@ -61,7 +61,7 @@ const Sidebar: React.FC<SidebarProps> = ({ state, setState, addChild, removeChil
         </button>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-6 flex-1">
         {state.mode === 'flex' ? (
           <div className="space-y-4 animate-in fade-in duration-500">
             <ControlGroup label="Flex Direction">
@@ -200,24 +200,27 @@ const Sidebar: React.FC<SidebarProps> = ({ state, setState, addChild, removeChil
                     </select>
                   </ControlGroup>
 
-                  {/* Fix per il disallineamento tra Grow e Shrink */}
-                  <div className="grid grid-cols-2 gap-3 items-start">
-                    <ControlGroup label="Flex Grow">
-                      <input 
-                        type="number" min="0" 
-                        value={selectedChild.flexGrow}
-                        onChange={(e) => updateChildStyles(selectedChild.id, { flexGrow: parseInt(e.target.value) || 0 })}
-                        className="w-full bg-white border border-slate-200 rounded-lg p-2 text-xs text-slate-800 shadow-sm h-[34px] focus:ring-2 focus:ring-blue-400 outline-none"
-                      />
-                    </ControlGroup>
-                    <ControlGroup label="Flex Shrink">
-                      <input 
-                        type="number" min="0" 
-                        value={selectedChild.flexShrink}
-                        onChange={(e) => updateChildStyles(selectedChild.id, { flexShrink: parseInt(e.target.value) || 0 })}
-                        className="w-full bg-white border border-slate-200 rounded-lg p-2 text-xs text-slate-800 shadow-sm h-[34px] focus:ring-2 focus:ring-blue-400 outline-none"
-                      />
-                    </ControlGroup>
+                  <div className="flex gap-3 items-start">
+                    <div className="flex-1">
+                      <ControlGroup label="Flex Grow">
+                        <input 
+                          type="number" min="0" 
+                          value={selectedChild.flexGrow}
+                          onChange={(e) => updateChildStyles(selectedChild.id, { flexGrow: parseInt(e.target.value) || 0 })}
+                          className="w-full bg-white border border-slate-200 rounded-lg p-2 text-xs text-slate-800 shadow-sm h-9 focus:ring-2 focus:ring-blue-400 outline-none"
+                        />
+                      </ControlGroup>
+                    </div>
+                    <div className="flex-1">
+                      <ControlGroup label="Flex Shrink">
+                        <input 
+                          type="number" min="0" 
+                          value={selectedChild.flexShrink}
+                          onChange={(e) => updateChildStyles(selectedChild.id, { flexShrink: parseInt(e.target.value) || 0 })}
+                          className="w-full bg-white border border-slate-200 rounded-lg p-2 text-xs text-slate-800 shadow-sm h-9 focus:ring-2 focus:ring-blue-400 outline-none"
+                        />
+                      </ControlGroup>
+                    </div>
                   </div>
 
                   <ControlGroup label="Flex Basis">
@@ -286,8 +289,8 @@ const Sidebar: React.FC<SidebarProps> = ({ state, setState, addChild, removeChil
 };
 
 const ControlGroup: React.FC<{ label: string; children: React.ReactNode }> = ({ label, children }) => (
-  <div className="flex flex-col gap-1.5 flex-1">
-    <label className="text-[10px] font-extrabold bg-gradient-to-r from-cyan-600 to-blue-500 bg-clip-text text-transparent uppercase tracking-widest block drop-shadow-sm min-h-[14px]">
+  <div className="flex flex-col gap-1.5 w-full">
+    <label className="text-[10px] font-extrabold bg-gradient-to-r from-cyan-600 to-blue-500 bg-clip-text text-transparent uppercase tracking-widest block drop-shadow-sm h-4 overflow-hidden whitespace-nowrap">
       {label}
     </label>
     <div className="w-full">
